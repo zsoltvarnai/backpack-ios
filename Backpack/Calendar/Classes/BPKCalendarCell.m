@@ -37,7 +37,9 @@
 
     if (self) {
         CAShapeLayer *selectionLayer = [[CAShapeLayer alloc] init];
+        selectionLayer.name = @"selectionLayer";
         CAShapeLayer *samedayLayer = [[CAShapeLayer alloc] init];
+        samedayLayer.name = @"samedayLayer";
         selectionLayer.actions = @{@"hidden":[NSNull null]};
         samedayLayer.actions = @{@"hidden":[NSNull null]};
         [self.contentView.layer insertSublayer:samedayLayer below:self.shapeLayer];

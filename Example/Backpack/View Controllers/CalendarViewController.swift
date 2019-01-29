@@ -25,9 +25,27 @@ class CalendarViewController: UIViewController, CalendarDelegate {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
 
     override func viewDidLoad() {
-        myView.minDate = Date()
+        myView.maxDate = Date(timeIntervalSince1970: 1609372800)
+        myView.minDate = Date(timeIntervalSince1970: 1546300800)
         myView.locale = Locale.current
         myView.delegate = self
+
+        // This causes the issue
+//        myView.selectionType = .range
+//        myView.selectedDates = [Date(timeIntervalSince1970: 1546473600), Date(timeIntervalSince1970: 1546819200)]
+//        myView.reloadData()
+//        myView.setNeedsLayout()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // When selection change and selected dates change
+        // here the issue does not happen
+        myView.selectionType = .range
+        myView.selectedDates = [Date(timeIntervalSince1970: 1546473600), Date(timeIntervalSince1970: 1546819200)]
+        myView.reloadData()
+        myView.setNeedsLayout()
     }
 
     @IBAction func valueChanged(_ sender: Any) {
