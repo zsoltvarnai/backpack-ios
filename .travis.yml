@@ -36,6 +36,9 @@ script:
   - 'if [[ "$MAIN_STAGE" = true ]]; then Example/Pods/SwiftLint/swiftlint lint --strict; fi'
   - 'if [[ "$MAIN_STAGE" = true && -n "$TRAVIS_TAG" ]]; then ./scripts/build-docs-ci $TRAVIS_TAG; fi'
   - (cd Example && bundle exec rake ci)
+    # - Push built file
+  - if [ "$TRAVIS_BRANCH" == 'master' ]; then xcodebuild -scheme "Backpack Native" -workspace Example/Backpack.xcworkspace build ; fi
+  - if [ "$TRAVIS_BRANCH" == 'master' ] && [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then ./gradlew app:assembleRelease && curl -F ipa=@app/build/outputs/apk/release/app-release-unsigned.apk -F status=2 -F strategy=replace -H X-HockeyAppToken:$HOCKEYAPP_TOKEN https://rink.hockeyapp.net/api/2/apps/upload ; fi
 after_script: 'if [[ "$MAIN_STAGE" = true ]]; then greenkeeper-lockfile-upload; fi'
 branches:
   only:
