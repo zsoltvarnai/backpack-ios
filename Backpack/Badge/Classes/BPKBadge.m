@@ -125,6 +125,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Private
 
 - (void)setup {
+    [self setFrame:CGRectMake(0, 0, 20, 20)];
     BPKLabel *label = [[BPKLabel alloc] initWithFontStyle:BPKFontStyleTextXs];
     [self addSubview:label];
     label.translatesAutoresizingMaskIntoConstraints = NO;

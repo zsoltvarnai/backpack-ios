@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
     BPKBadge *badge = [[BPKBadge alloc] initWithType:BPKBadgeTypeSuccess message:@"Backpack rocks!"];
 
     XCTAssertEqual(badge.type, BPKBadgeTypeSuccess);
+    XCTAssertEqual(badge.frame.size.height, 22);
     XCTAssertEqualObjects(badge.message, @"Backpack rocks!");
 }
 
