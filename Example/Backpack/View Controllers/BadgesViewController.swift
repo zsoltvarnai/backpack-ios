@@ -20,7 +20,7 @@ import UIKit
 import Backpack
 
 class BadgesViewController: UIViewController {
-    @IBOutlet var badgeCollections: [BPKBadgeContainer]!
+    @IBOutlet var badgeCollection: BadgeCollection!
     fileprivate static var badgeTypes = [BPKBadgeType.success, BPKBadgeType.warning,
                                          BPKBadgeType.destructive, BPKBadgeType.light,
                                          BPKBadgeType.inverse, BPKBadgeType.outline]
@@ -28,12 +28,6 @@ class BadgesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        assert(badgeCollections.count == BadgesViewController.badgeTypes.count)
-
-        var iterator = 0
-        for badgeCollection in badgeCollections {
-            badgeCollection.badgeType = BadgesViewController.badgeTypes[iterator]
-            iterator += 1
-        }
+        badgeCollection.setNames(["a","a","a","a","a","a"])
     }
 }
