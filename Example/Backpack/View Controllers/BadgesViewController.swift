@@ -20,7 +20,7 @@ import UIKit
 import Backpack
 
 class BadgesViewController: UIViewController {
-    @IBOutlet var badgeCollection: BadgeCollection!
+    @IBOutlet weak var badgeCollection: BadgeCollection!
     fileprivate static var badgeTypes = [BPKBadgeType.success, BPKBadgeType.warning,
                                          BPKBadgeType.destructive, BPKBadgeType.light,
                                          BPKBadgeType.inverse, BPKBadgeType.outline]

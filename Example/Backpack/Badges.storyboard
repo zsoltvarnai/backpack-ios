@@ -21,17 +21,21 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jd4-VG-eLw">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GG4-iK-JcA" customClass="BadgeCollection">
-                                        <rect key="frame" x="20" y="259.5" width="335" height="128"/>
-                                        <color key="backgroundColor" red="0.83864905082193064" green="1" blue="0.98363829589134855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="abe-Is-s7U">
+                                        <rect key="frame" x="20" y="223" width="335" height="128"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GWZ-K4-UnP" customClass="BadgeCollection">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="128"/>
+                                                <color key="backgroundColor" red="0.8751029767642603" green="0.93087760964170885" blue="0.96235281230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="GG4-iK-JcA" firstAttribute="leading" secondItem="jd4-VG-eLw" secondAttribute="leading" constant="20" id="D1b-L6-9kD"/>
-                                    <constraint firstAttribute="bottom" secondItem="GG4-iK-JcA" secondAttribute="bottom" constant="260" id="GgO-a8-Uki"/>
-                                    <constraint firstAttribute="trailing" secondItem="GG4-iK-JcA" secondAttribute="trailing" constant="20" id="W7h-YP-jAt"/>
-                                    <constraint firstItem="GG4-iK-JcA" firstAttribute="centerY" secondItem="jd4-VG-eLw" secondAttribute="centerY" id="bbw-tc-5Xd"/>
-                                    <constraint firstItem="GG4-iK-JcA" firstAttribute="centerX" secondItem="jd4-VG-eLw" secondAttribute="centerX" id="cK8-C8-HRf"/>
+                                    <constraint firstItem="abe-Is-s7U" firstAttribute="centerX" secondItem="jd4-VG-eLw" secondAttribute="centerX" id="1zS-Ti-4FB"/>
+                                    <constraint firstItem="abe-Is-s7U" firstAttribute="centerY" secondItem="jd4-VG-eLw" secondAttribute="centerY" id="I4W-Eb-zGF"/>
+                                    <constraint firstItem="abe-Is-s7U" firstAttribute="leading" secondItem="jd4-VG-eLw" secondAttribute="leading" constant="20" id="Nqq-ef-8hn"/>
+                                    <constraint firstAttribute="trailing" secondItem="abe-Is-s7U" secondAttribute="trailing" constant="20" id="gZI-AP-Yac"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -45,7 +49,7 @@
                         <viewLayoutGuide key="safeArea" id="sDy-5L-lfc"/>
                     </view>
                     <connections>
-                        <outlet property="badgeCollection" destination="GG4-iK-JcA" id="XHr-fP-baM"/>
+                        <outlet property="badgeCollection" destination="GWZ-K4-UnP" id="hsr-0a-Hnh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgi-Wj-HcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
