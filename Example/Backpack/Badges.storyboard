@@ -21,8 +21,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jd4-VG-eLw">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="abe-Is-s7U">
-                                        <rect key="frame" x="20" y="120" width="335" height="432.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="95" translatesAutoresizingMaskIntoConstraints="NO" id="abe-Is-s7U">
+                                        <rect key="frame" x="20" y="120" width="335" height="438"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Backpack label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naG-QO-1gB" customClass="BPKLabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="20.5"/>
@@ -30,28 +30,40 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="800" verticalCompressionResistancePriority="800" ambiguous="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ar-s7-Czy" customClass="BPKTextView">
-                                                <rect key="frame" x="0.0" y="112.5" width="335" height="100"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ar-s7-Czy" customClass="BPKTextView">
+                                                <rect key="frame" x="0.0" y="36.25" width="335" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GWZ-K4-UnP" customClass="BadgeCollection">
-                                                <rect key="frame" x="0.0" y="304.5" width="335" height="128"/>
+                                                <rect key="frame" x="0.0" y="163" width="335" height="108"/>
                                                 <color key="backgroundColor" red="0.8751029767642603" green="0.93087760964170885" blue="0.96235281230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Some small text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oiw-KA-T4m" customClass="BPKLabel">
+                                                <rect key="frame" x="0.0" y="352" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="size">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
                                         </subviews>
-                                        <color key="tintColor" red="0.96235281229019165" green="0.74525480371624142" blue="0.8577789755489631" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="5Ar-s7-Czy" firstAttribute="leading" secondItem="abe-Is-s7U" secondAttribute="leading" id="D3J-7q-9eP"/>
-                                            <constraint firstItem="GWZ-K4-UnP" firstAttribute="top" secondItem="5Ar-s7-Czy" secondAttribute="bottom" constant="10.5" id="Vzv-SC-83s"/>
-                                            <constraint firstAttribute="height" constant="432.5" id="aaq-pK-eWW"/>
+                                            <constraint firstItem="Oiw-KA-T4m" firstAttribute="top" secondItem="GWZ-K4-UnP" secondAttribute="bottom" constant="10" id="ReL-Ig-rOl"/>
                                             <constraint firstAttribute="trailing" secondItem="5Ar-s7-Czy" secondAttribute="trailing" id="g3L-g0-UgY"/>
                                             <constraint firstItem="5Ar-s7-Czy" firstAttribute="top" secondItem="naG-QO-1gB" secondAttribute="bottom" constant="10.5" id="xXt-u9-f80"/>
+                                            <constraint firstItem="GWZ-K4-UnP" firstAttribute="top" secondItem="5Ar-s7-Czy" secondAttribute="bottom" constant="10" id="yPc-pG-gJ9"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.87916936528497414" green="0.87916936528497414" blue="0.87916936528497414" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="abe-Is-s7U" firstAttribute="centerX" secondItem="jd4-VG-eLw" secondAttribute="centerX" id="1zS-Ti-4FB"/>
                                     <constraint firstItem="abe-Is-s7U" firstAttribute="centerY" secondItem="jd4-VG-eLw" secondAttribute="centerY" id="I4W-Eb-zGF"/>
@@ -71,6 +83,7 @@
                     </view>
                     <connections>
                         <outlet property="badgeCollection" destination="GWZ-K4-UnP" id="hsr-0a-Hnh"/>
+                        <outlet property="tv" destination="5Ar-s7-Czy" id="zNp-Hb-xgq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vgi-Wj-HcW" userLabel="First Responder" sceneMemberID="firstResponder"/>

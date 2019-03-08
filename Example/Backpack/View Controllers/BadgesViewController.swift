@@ -21,6 +21,7 @@ import Backpack
 
 class BadgesViewController: UIViewController {
     @IBOutlet weak var badgeCollection: BadgeCollection!
+    @IBOutlet weak var tv: TextView!
     fileprivate static var badgeTypes = [BPKBadgeType.success, BPKBadgeType.warning,
                                          BPKBadgeType.destructive, BPKBadgeType.light,
                                          BPKBadgeType.inverse, BPKBadgeType.outline]
@@ -28,6 +29,7 @@ class BadgesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        badgeCollection.setNames(["a","a","a","a","a","a"])
+        tv.text = "ASDF\nASDF 2\nASDF 3\nASDF 4\nASDF 5\nASDF 6\nASDF 7\n"
+        badgeCollection.setNames(["a", "a", "a", "a", "a", "a"])
     }
 }
