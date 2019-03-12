@@ -57,6 +57,7 @@ class DialogUITest: XCTestCase {
         app.tables.staticTexts["Dialogs"].tap()
         app.tables.staticTexts[story].tap()
 
+        app.activate()
         app.buttons["Show"].tap()
     }
 
