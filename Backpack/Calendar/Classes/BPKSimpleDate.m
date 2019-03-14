@@ -67,7 +67,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 -(NSString *)description {
-    return [NSString stringWithFormat:@"%lu-%lu-%lu", (unsigned long)self.year, self.month, self.day];
+    return [NSString stringWithFormat:@"%lu-%lu-%lu", self.year, self.month, self.day];
 }
 
 @end
